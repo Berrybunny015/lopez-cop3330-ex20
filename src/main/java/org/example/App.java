@@ -27,13 +27,13 @@ public class App {
         Scanner stateInput = new Scanner(System.in); //scan for the state
         String state = stateInput.next();
 
-        System.out.println("\nWhat county do you live in (e.g. Eau Claire, Dunn, Dane)? "); //ask the user for which county
-        Scanner countyInput = new Scanner(System.in); //scan for the state
-        String county = countyInput.nextLine();
-
         double taxAmount = 0; //the amount of taxes that will be added to the total cost in the end
 
         if (state.equals(wisconsin)) { //if the user is a resident of Wisconsin
+
+            System.out.println("\nWhat county do you live in (e.g. Eau Claire, Dunn, Dane)? "); //ask the user for which county
+            Scanner countyInput = new Scanner(System.in); //scan for the state
+            String county = countyInput.nextLine();
 
             if (county.equals(eauClaire)) { //if the wisconsin resident lives in eau claire county
                 taxAmount = orderAmount * (wisconsinTax + eauClaireTax); //if so, then a new taxAmount is calculated
